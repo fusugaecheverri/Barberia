@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xek*2u%1bmwuq1%n=o=@c9dswqxf8we58y$%zmpztd)yhf&-pa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['barberia-production-4ee9.up.railway.app', '127.0.0.1', 'localhost']
 
 
 # Application definition
