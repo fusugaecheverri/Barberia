@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -143,3 +144,5 @@ EMAIL_HOST_USER = 'fusugaecheverri@gmail.com'
 EMAIL_HOST_PASSWORD = 'adqm vxkg mary uiwc'
 DEFAULT_FROM_EMAIL = 'fusugaecheverri@gmail.com'
 PASSWORD_RESET_TIMEOUT = 3600
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
