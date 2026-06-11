@@ -3,6 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn Barberia.wsgi --log-file -"
+    "startCommand": "python manage.py collectstatic --noinput && gunicorn Barberia.wsgi --log-file -"
   }
 }
