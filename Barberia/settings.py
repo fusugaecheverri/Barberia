@@ -145,4 +145,4 @@ EMAIL_HOST_PASSWORD = 'adqm vxkg mary uiwc'
 DEFAULT_FROM_EMAIL = 'fusugaecheverri@gmail.com'
 PASSWORD_RESET_TIMEOUT = 3600
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
