@@ -1,0 +1,129 @@
+body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(red, white, rgb(42, 42, 240));
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Contenedor-Registro-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px 0;
+}
+
+.Contenedor-Registro-2 {
+    width: 90%;
+    max-width: 400px;
+    border: 2px solid red;
+    border-radius: 40px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Registro-1 {
+    text-align: center;
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: clamp(20px, 3vw, 35px);
+    margin-bottom: 20px;
+}
+
+.Registro-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Registro-3, .Registro-5, .Registro-7, .Registro-9 {
+    width: 100%;
+    font-size: clamp(12px, 1.2vw, 15px);
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.Registro-4, .Registro-6, .Registro-8 {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border: 2px solid red;
+    border-radius: 15px;
+    font-size: clamp(13px, 1.5vw, 17px);
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: blue;
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.Registro-4:focus, .Registro-6:focus, .Registro-8:focus {
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.Registro-10 {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border: 2px solid red;
+    border-radius: 15px;
+    font-size: clamp(13px, 1.5vw, 17px);
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: blue;
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow 0.2s;
+    resize: none;
+    height: 80px;
+}
+
+.Registro-10:focus {
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.Registro-11 {
+    display: block;
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    color: white;
+    font-size: clamp(13px, 1.5vw, 18px);
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Registro-11:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.Registro-11:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+    .Contenedor-Registro-2 {
+        border-radius: 20px;
+        padding: 25px 15px;
+    }
+}

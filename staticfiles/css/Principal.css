@@ -1,0 +1,245 @@
+body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(red, white, rgb(42, 42, 240));
+    background-attachment: fixed;
+}
+.Contenedor-1{
+    display: flex; 
+    justify-content: center; 
+    margin: 5px;
+}
+#Contenedor-2{
+    width: 98%;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px rgba(4, 0, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-3{
+    width: 95%;
+    height: 65px;
+    border-radius: 10px;
+}
+.Contenedor-4{
+    text-align: center;
+    color: blue;
+}
+.Imagen-1{
+    width: 10%;
+    height: 50%;
+}
+.Imagen-2{
+    width: 10%;
+    height: 50%;
+}
+.Contenedor-5{
+    display: flex; 
+}
+
+.Menu-1{
+    width: 131%;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 10px rgba(4, 0, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    margin: 10px;
+}
+.Menu-2{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.Menu-2 li a {
+    color: rgb(25, 0, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Menu-Despegable {
+    position: relative;
+}
+
+.Sub-Menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, red, white, blue);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 120px;
+}
+
+.Sub-Menu li {
+    padding: 8px 20px;
+}
+
+.Sub-Menu li a {
+    color: blue;
+}
+
+.Menu-Despegable:hover .Sub-Menu {
+    display: block;
+}
+.Contenedor-Padre{
+    display: flex;
+    flex-direction: row;
+}
+.Contenedor-derecho {
+    width: 70%;
+    min-height: 250px;        /* mejor min-height que height fijo */
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px rgba(4, 0, 255, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;   /* apila verticalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Primer-h1 {
+    font-size: 20px;
+    color: blue;
+    margin: 0;
+}
+
+.Primer-parrafo {
+    font-size: 12px;
+    max-width: 400px;
+    margin: 10px 0;  
+    text-align: center;
+    color: blue;
+}
+
+.Primer-ul {
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: left;   
+    color: blue;
+}
+
+.Segundo-parrafo {
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: center;
+    color: blue;
+}
+.Contenedor-6{
+    width: 30%;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px rgba(4, 0, 255, 0.2);
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.Imagen-3{
+    width: 90%;
+    height: 90%;
+    margin: 5px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px 20px rgba(4, 0, 255, 0.2);
+}
+.Contenedor-7{
+    display: flex; 
+    justify-content: center; 
+    margin: 10px;
+    align-items: center;
+}
+#Contenedor-8{
+    width: 98%;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px rgba(4, 0, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.Contenedor-x{
+    width: 95%;
+    height: 65px;
+    border-radius: 10px;
+}
+.Contenedor-9{
+    text-align: center;
+    color: blue;
+    margin-top: 5px; /* espacio pequeño debajo del título */
+    font-size: 16px;
+}
+.Imagen-4{
+    display: block;     
+    margin: 0 auto;   
+    width: 60px;   
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.Imagen-4:hover{
+    transform: scale(1.2);      
+    filter: brightness(1.3);     
+    cursor: pointer;
+}
+.Tercer-parrafo {
+  text-align: center;
+  color: blue; 
+  margin-top: 5px; 
+  font-size: 5px;
+}
+ /**  CSS Cortes **/
+
+
+
+@media (max-width: 900px) {
+    .Contenedor-Padre {
+        flex-direction: column;
+    }
+    .Contenedor-6, .Contenedor-derecho {
+        width: 95%;
+        margin: 5px auto;
+    }
+    .Menu-1 {
+        width: 100%;
+        height: auto;
+        padding: 5px 0;
+    }
+    .Menu-2 {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #Contenedor-2, #Contenedor-8 {
+        height: auto;
+        padding: 10px;
+    }
+    .Imagen-1, .Imagen-2 {
+        width: 15%;
+    }
+    .Menu-2 {
+        gap: 10px;
+        font-size: 13px;
+    }
+    .Primer-h1 {
+        font-size: 16px;
+    }
+    .Contenedor-6 {
+        height: 180px;
+    }
+}
