@@ -1,0 +1,30 @@
+{% extends "principal.html" %}
+{% load static %}
+{% block title %}Muestra de Cortes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cortes.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="Contenedor-1-Cortes">
+   <div class="Contenedor-2-Cortes">
+      <h1 class="h1-cortes-primer">Muestra de cortes de 1312 Barber Club</h1>
+   </div>
+</div>
+
+{# 👇 Botón atrás #}
+<button class="boton-atras" onclick="history.back()">← Volver atrás</button>
+
+<div class="Contenedor-3-Cortes">
+   {% for img in imagenes %}
+   <div class="Contenedor-4-Cortes">
+      <img src="{{ img.archivo.url }}" alt="{{ img.titulo }}">
+      <p class="parrafo-cortes-1">{{ img.titulo }}</p>
+      <p class="parrafo-cortes-2">{{ img.descripcion }}</p>
+   </div>
+   {% endfor %}
+</div>
+
+{% endblock %}

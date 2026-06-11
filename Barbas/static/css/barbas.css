@@ -1,0 +1,166 @@
+body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(red, white, rgb(42, 42, 240));
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Contenedor-1-Cortes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contenedor-2-Cortes {
+    border: 2px solid blue;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px blue;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-cortes-primer {
+    color: blue;
+    box-shadow: 0px 0px 10px 5px blue;
+    border-radius: 20px;
+    width: 70%;
+    text-shadow: 2px 2px 4px blue;
+    font-size: clamp(14px, 2.5vw, 32px);
+}
+
+.Contenedor-3-Cortes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Contenedor-3-Cortes img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.Contenedor-4-Cortes {
+    margin: 10px;
+    padding: 5px;
+    width: 180px;
+    min-width: 140px;
+    max-width: 220px;
+    flex: 1 1 180px;
+    border: 2px solid red;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#e6f0ff, #99ccff, #3366cc);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 255, 0.4);
+    box-sizing: border-box;
+}
+
+.parrafo-cortes-1 {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: clamp(13px, 1.2vw, 18px);
+}
+
+.parrafo-cortes-2 {
+    width: 100%;
+    text-align: center;
+    color: blue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: clamp(11px, 1vw, 15px);
+}
+
+.parrafo-cortes-3 {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: clamp(13px, 1.2vw, 18px);
+}
+
+.Contenedor-4-Cortes a {
+    margin-top: 8px;
+    display: block;
+    text-align: center;
+    font-size: clamp(11px, 1vw, 15px);
+    text-decoration: none;
+    color: blue;
+}
+
+.agregar {
+    width: 90%;
+    padding: clamp(6px, 1vw, 10px);
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    color: white;
+    font-size: clamp(11px, 1vw, 14px);
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.agregar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.agregar:active {
+    transform: scale(0.95);
+}
+.volver {
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0000ff, #ff0000);
+    color: white;
+    font-size: 15px;
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 255, 0.4);
+}
+
+.volver:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .Contenedor-4-Cortes {
+        flex: 1 1 150px;
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Contenedor-4-Cortes {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 5px 0;
+    }
+    .Contenedor-2-Cortes {
+        width: 95%;
+    }
+    .h1-cortes-primer {
+        width: 90%;
+    }
+}

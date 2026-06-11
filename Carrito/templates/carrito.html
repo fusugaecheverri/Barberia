@@ -1,0 +1,56 @@
+{% extends "principal.html" %}
+{% load static %}
+{% block title %}Carrito{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/carrito.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/carrito.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="Contenedor-Carrito-1">
+    <h2 class="Carrito-1">🛒 Carrito 🛒</h2>
+
+    <a href="javascript:history.back()">
+        <button class="Carrito-9">← Volver atrás</button>
+    </a>
+    {% if no_autenticado %}
+    <div style="text-align:center; margin: 30px auto;">
+        <h2 style="color: blue; font-family: 'Lobster', cursive; font-size: 1.5em;">
+            🔒 Debes iniciar sesión para ver tu carrito
+        </h2>
+        <a href="{% url 'iniciar_sesion' %}">
+            <button class="Carrito-9">Iniciar sesión</button>
+        </a>
+    </div>
+    {% else %}
+    {% for item in items %}
+    <div class="Contenedor-Carrito-2">
+        <h3 class="Carrito-2">{{ item.producto.titulo }}</h3>
+        <h4 class="Carrito-3">Precio Unidad: $ {{ item.producto.precio }}</h4>
+
+        <div class="Contenedor-Carrito-3">
+            <a href="{% url 'actualizar_cantidad' item.id 'restar' %}">
+                <button class="Carrito-4">-</button>
+            </a>
+            <span class="Carrito-5">{{ item.cantidad }}</span>
+            <a href="{% url 'actualizar_cantidad' item.id 'sumar' %}">
+                <button class="Carrito-6">+</button>
+            </a>
+        </div>
+
+        <h5 class="Carrito-7">Precio Total: $ {{ item.total }}</h5>
+    </div>
+    {% empty %}
+    <p class="Carrito-8">El carrito está vacío</p>
+    {% endfor %}
+
+    <a href="{% url 'Productos' %}">
+        <button class="Carrito-9">Seguir comprando</button>
+    </a>
+     {% endif %}
+</div>
+{% endblock %}

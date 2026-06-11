@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/principal.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <div class="Contenedor-1">
+        <header id="Contenedor-2">
+            <img src="{% static '/media/Logo/Icon_Baber.png' %}" alt="Barbería" class="Imagen-1">
+            <h1 class="Contenedor-4">1312 Barber Club</h1>
+            <img src="{% static '/media/Logo/Icon_Baber.png' %}" alt="Barbería" class="Imagen-2">
+        </header>
+    </div>
+    {% block content %}
+    <div class="Contenedor-5">
+        <nav class="Menu-1">
+            <ul class="Menu-2">
+                <li><a href="{% url 'Principal' %}">Inicio</a></li>
+                <li class="Menu-Despegable">
+                    <a href="#">Servicios</a>
+                    <ul class="Sub-Menu">
+                        <li><a href="{% url 'Cortes' %}">Cortes</a></li>
+                        <li><a href="{% url 'Barbas' %}">Barbas</a></li>
+                        <li><a href="{% url 'Productos' %}">Productos</a></li>
+                        <li><a href="{% url 'SobreNosotros' %}">Sobre nosotros</a></li>
+                    </ul>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li>Bienvenido, {{ request.user.username }}</li>
+                <li><a href="{% url 'cerrar_sesion' %}">Cerrar sesión</a></li>
+                {% else %}
+                <li><a href="{% url 'iniciar_sesion' %}">Iniciar sesión</a></li>
+                <li><a href="{% url 'registro' %}">Registrarse</a></li>
+                {% endif %}
+                <li><a href="{% url 'ver_carrito' %}">Carrito</a></li>
+                <li><a href="{% url 'ubicacion' %}">ubicacion</a></li>    
+                <li><a href="{% url 'contactanos' %}">Contactanós</a></li>    
+                
+            </ul>
+        </nav>
+    </div>
+    <div class="Contenedor-Padre">
+        <div class="Contenedor-6">
+            <img src="{% static '/media/barberia/FotoBaber1.png' %}" alt="Barbería" class="Imagen-3">
+        </div>
+        <div class="Contenedor-derecho">
+            <div class="Contenedor-Padre-1">
+                <h1 class="Primer-h1">✂️ Bienvenido a 1312 Barber Club 🎮</h1>
+                <p class="Primer-parrafo">Donde el estilo clásico se encuentra con la diversión moderna.
+                    En nuestra barbería no solo vienes a cortarte el cabello o arreglar tu barba: aquí disfrutas de una
+                    experiencia completa.
+                    Mientras esperas tu turno, relájate en nuestra sala de videojuegos equipada con consolas de última
+                    generación, pantallas gigantes y un ambiente lleno de energía.</p>
+                <ul class="Primer-ul">
+                    <li>Cortes profesionales que marcan tu estilo.</li>
+                    <li>Diseños de barba que resaltan tu personalidad.</li>
+                    <li>Combos exclusivos que combinan cuidado y entretenimiento.</li>
+                    <li>Zona gamer para que la espera sea parte de la diversión.</li>
+                </ul>
+                <p class="Segundo-parrafo">En 1312 Barber Club, cada visita es un momento para verte mejor, sentirte
+                    mejor y pasarla bien. ¡Ven, juega, disfruta y luce impecable!</p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <div class="Contenedor-7">
+        <footer id="Contenedor-8">
+            <a href="https://www.facebook.com" target="_blank"><img src="{% static '/media/Logo/Icon_facebook.png' %}"
+                    alt="Barbería" class="Imagen-4"></a>
+            <img src="{% static '/media/Logo/Icon_Baber.png' %}" alt="Barbería" class="Imagen-1">
+            <div class="Contenedor-10">
+                <h1 class="Contenedor-9">1312 Barber Club</h1>
+                <p class="Tercer-parrafo">Pagina web de 1312 Barber Club ©</p>
+            </div>
+            <img src="{% static '/media/Logo/Icon_Baber.png' %}" alt="Barbería" class="Imagen-2">
+            <a href="https://instagram.com" target="_blank"><img src="{% static '/media/Logo/Icon_instagram.png' %}"
+                    alt="Barbería" class="Imagen-4"></a>
+        </footer>
+    </div>
+</body>
+
+</html>

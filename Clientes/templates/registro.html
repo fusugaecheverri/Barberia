@@ -1,0 +1,43 @@
+{% extends "principal.html" %}
+{% load static %}
+{% block title %}Registrarse{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="Contenedor-Registro-1">
+    <div class="Contenedor-Registro-2">
+        <h2 class="Registro-1">Registrarse</h2>
+
+        {% if messages %}
+        {% for message in messages %}
+        <p style="color:red; font-family:'Lobster',cursive;">{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+
+        <a href="javascript:history.back()">
+            <button class="Registro-11">← Volver atrás</button>
+        </a>
+
+        <form class="Registro-2" method="post">
+            {% csrf_token %}
+            <label class="Registro-3">Usuario:</label>
+            <input class="Registro-4" type="text" name="username" required>
+
+            <label class="Registro-5">Contraseña:</label>
+            <input class="Registro-6" type="password" name="password" required>
+
+            <label class="Registro-7">Teléfono:</label>
+            <input class="Registro-8" type="text" name="telefono" required>
+
+            <label class="Registro-9">Correo electrónico:</label>
+            <input class="Registro-10" type="email" name="email" required>
+
+            <button class="Registro-11" type="submit">Registrarse</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

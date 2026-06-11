@@ -1,0 +1,157 @@
+body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(red, white, rgb(42, 42, 240));
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Contenedor-Carrito-1 {
+    width: 90%;
+    max-width: 1000px;
+    min-height: auto;
+    height: auto;
+    border: 2px solid red;
+    margin: 3% auto;
+    border-radius: 40px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.Carrito-1 {
+    text-align: center;
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: clamp(20px, 3vw, 35px);
+}
+
+.Carrito-2, .Carrito-3, .Carrito-7 {
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    font-size: clamp(11px, 1.2vw, 17px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Contenedor-Carrito-2 {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr auto 1.5fr;
+    align-items: center;
+    padding: 12px 2%;
+    gap: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.Contenedor-Carrito-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.Carrito-4, .Carrito-6 {
+    width: clamp(28px, 3vw, 40px);
+    height: clamp(28px, 3vw, 40px);
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff0000, #0000ff);
+    color: white;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Carrito-4:hover, .Carrito-6:hover {
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.Carrito-4:active, .Carrito-6:active {
+    transform: scale(0.95);
+}
+
+.Carrito-5 {
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.Carrito-8 {
+    text-align: center;
+    color: blue;
+}
+
+.Carrito-9 {
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0000ff, #ff0000);
+    color: white;
+    font-size: clamp(13px, 1.5vw, 18px);
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Carrito-9:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+    .Contenedor-Carrito-2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    .Carrito-7 {
+        grid-column: span 2;
+    }
+    .Contenedor-Carrito-3 {
+        grid-column: span 2;
+    }
+    .Carrito-9 {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Contenedor-Carrito-2 {
+        grid-template-columns: 1fr;
+    }
+    .Carrito-7 {
+        grid-column: span 1;
+    }
+    .Contenedor-Carrito-3 {
+        grid-column: span 1;
+    }
+    .Contenedor-Carrito-1 {
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .Carrito-9 {
+        width: 80%;
+    }
+}

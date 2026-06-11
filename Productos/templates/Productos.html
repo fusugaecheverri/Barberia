@@ -1,0 +1,34 @@
+{% extends "principal.html" %}
+{% load static %}
+{% block title %}Muestra de Cortes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/Productos.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="Contenedor-1-Cortes">
+    <div class="Contenedor-2-Cortes">
+        <h1 class="h1-cortes-primer">Muestra de cortes de 1312 Barber Club</h1>
+    </div>
+</div>
+<div class="Contenedor-1-Cortes">
+    <a href="javascript:history.back()">
+        <button class="volver">← Volver atrás</button>
+    </a>
+</div>
+<div class="Contenedor-3-Cortes">
+    {% for img in imagenes %}
+    <div class="Contenedor-4-Cortes">
+        <img src="{{ img.archivo.url }}" alt="{{ img.titulo }}">
+        <p class="parrafo-cortes-1">{{ img.titulo }}</p>
+        <p class="parrafo-cortes-2">{{ img.descripcion }}</p>
+        <p class="parrafo-cortes-3">{{ img.precio }}</p>
+         <a href="{% url 'agregar_producto' img.id %}">
+            <button class="agregar">Agregar al carrito</button>
+         </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

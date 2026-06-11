@@ -1,0 +1,76 @@
+{% extends "principal.html" %}
+{% load static %}
+{% block title %}Sobre Nosotros{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/sobrenosotros.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="Contenedor-Sobre-1">
+
+    <div class="Contenedor-Sobre-2">
+        <h1 class="Sobre-1">✂️ Sobre Nosotros ✂️</h1>
+    </div>
+    <div style="text-align: center; margin-bottom: 20px;">
+    <a href="javascript:history.back()">
+        <button class="volver">← Volver atrás</button>
+    </a>
+    </div>
+
+    <div class="Contenedor-Sobre-3">
+        <div class="Contenedor-Sobre-4">
+            <h2 class="Sobre-2">🏆 Nuestra Historia</h2>
+            <p class="Sobre-3">1312 Barber Club nació en 2018 con una visión única: combinar el arte del barbero tradicional con la cultura gamer. Somos más que una barbería, somos un espacio donde el estilo y la diversión se encuentran.</p>
+        </div>
+
+        <div class="Contenedor-Sobre-4">
+            <h2 class="Sobre-2">🎮 Nuestra Misión</h2>
+            <p class="Sobre-3">Ofrecerte el mejor corte mientras disfrutas de una experiencia única. Mientras esperas tu turno, relájate en nuestra zona gamer con consolas de última generación y pantallas gigantes.</p>
+        </div>
+
+        <div class="Contenedor-Sobre-4">
+            <h2 class="Sobre-2">⭐ Nuestra Visión</h2>
+            <p class="Sobre-3">Ser la barbería de referencia en la ciudad, reconocida por la calidad de nuestros servicios y por crear una comunidad donde cada cliente se sienta como en casa.</p>
+        </div>
+    </div>
+
+    <div class="Contenedor-Sobre-5">
+        <h2 class="Sobre-4">👥 Nuestro Equipo</h2>
+        <div class="Contenedor-Sobre-6">
+            <div class="Contenedor-Sobre-7">
+                <div class="Sobre-5">✂️</div>
+                <h3 class="Sobre-6">Carlos Rodríguez</h3>
+                <p class="Sobre-7">Fundador & Barbero Senior</p>
+                <p class="Sobre-8">10 años de experiencia en cortes modernos y clásicos.</p>
+            </div>
+            <div class="Contenedor-Sobre-7">
+                <div class="Sobre-5">✂️</div>
+                <h3 class="Sobre-6">Andrés López</h3>
+                <p class="Sobre-7">Especialista en Barbas</p>
+                <p class="Sobre-8">Experto en diseño y cuidado de barba.</p>
+            </div>
+            <div class="Contenedor-Sobre-7">
+                <div class="Sobre-5">✂️</div>
+                <h3 class="Sobre-6">Miguel Torres</h3>
+                <p class="Sobre-7">Barbero & Gamer</p>
+                <p class="Sobre-8">El encargado de la zona gamer y cortes urbanos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Contenedor-Sobre-8">
+        <h2 class="Sobre-9">📍 Horarios</h2>
+        <div class="Contenedor-Sobre-9">
+            <div class="Contenedor-Sobre-10">
+                <h3 class="Sobre-10">🕐 Horarios</h3>
+                <p class="Sobre-11">Lunes a Viernes: 9:00am - 8:00pm</p>
+                <p class="Sobre-11">Sábados: 8:00am - 6:00pm</p>
+                <p class="Sobre-11">Domingos: 10:00am - 4:00pm</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "principal.html" %}
+{% load static %}
+{% block title %}Recuperar Contraseña{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="Contenedor-Login-1">
+    <div class="Contenedor-Login-2">
+        <h2 class="Login-1">🔑 Recuperar Contraseña</h2>
+
+        {% if messages %}
+        {% for message in messages %}
+        {% if message.tags == 'error' %}
+        <p class="Login-error">{{ message }}</p>
+        {% else %}
+        <p class="Login-success">{{ message }}</p>
+        {% endif %}
+        {% endfor %}
+
+        <form class="Login-2" method="post">
+            {% csrf_token %}
+            <input class="Login-3" type="email" name="correo" placeholder="Tu correo electrónico" required>
+            <input class="Login-3" type="password" name="nueva_password" placeholder="Nueva contraseña" required>
+            <input class="Login-3" type="password" name="confirmar_password" placeholder="Confirmar contraseña"
+                required>
+            <button class="Login-5" type="submit">Cambiar contraseña</button>
+        </form>
+
+        <a href="{% url 'iniciar_sesion' %}">
+            <button class="Login-5">← Volver al login</button>
+        </a>
+    </div>
+</div>
+{% endblock %}
